@@ -6,6 +6,7 @@ import Footer from "../components/Footer.astro";
 import HomePosts from "../components/HomePosts.astro";
 import ColorScript from "../components/ColorScript.astro";
 import Tags from "../components/Tags.astro";
+import Newsletter from "../components/Newsletter.astro";
 import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 import { Content as About } from "./about.md";
 import getTags from "../scripts/getTags";
@@ -28,8 +29,12 @@ const tags = getTags(posts);
 
 			<HomePosts allPosts={posts} />
 
+			<br />
+
+			<Newsletter />
+
 			<p class="center">
-				You can also <a href="https://blahg.netlify.app/rss.xml">
+				You can also <a href="http://localhost:4321/rss.xml">
 					subscribe with RSS!
 				</a>
 			</p>

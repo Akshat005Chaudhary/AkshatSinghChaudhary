@@ -27,12 +27,15 @@ html,
 body {
 	margin: auto;
 	padding: 20px;
-	max-width: 70ch;
+	max-width: 120ch;
 	background-color: var(--white);
 	word-wrap: break-word;
 	overflow-wrap: break-word;
 	color: var(--black);
 }
+
+
+
 html,
 body,
 button,
@@ -126,10 +129,13 @@ nav {
 	background: var(--transwhite);
 	-webkit-backdrop-filter: blur(1px);
 	backdrop-filter: blur(1px);
+	padding: 1.5rem 0;
+	line-height: 2.5;
 }
 
 nav a {
-	margin: 25px 0;
+	display: inline-block;
+	margin: 0;
 }
 nav a:not(:last-child) {
 	padding: 0 12px 0 0;
@@ -231,7 +237,7 @@ h3 {
 }
 
 .header-frame {
-	max-width: 350px;
+	max-width: 600px;
 }
 
 article :not(.article-title) {
@@ -260,8 +266,19 @@ ul li time {
 	white-space: nowrap;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
+	html,
+	body {
+		max-width: 100%;
+		padding: 15px;
+	}
+
+	nav {
+		padding: 1rem 0;
+		line-height: 2;
+	}
+
 	nav a:not(:last-child) {
-		padding: 0;
+		padding: 0 8px 0 0;
 	}
 }

@@ -1,0 +1,118 @@
+---
+// Newsletter subscription component using Buttondown
+---
+
+<div class="newsletter-signup">
+	<h3>Subscribe to my newsletter</h3>
+	<p>Get notified when I publish new blog posts!</p>
+	
+	<form
+		action="https://buttondown.email/api/emails/embed-subscribe/AkshatSinghChaudhary"
+		method="post"
+		target="popupwindow"
+		class="newsletter-form"
+	>
+		<input
+			type="email"
+			name="email"
+			id="bd-email"
+			placeholder="your@email.com"
+			required
+			aria-label="Email address"
+		/>
+		<input type="submit" value="Subscribe" />
+	</form>
+	
+	<p class="newsletter-note">No spam, unsubscribe anytime.</p>
+</div>
+
+<style>
+	.newsletter-signup {
+		max-width: 500px;
+		margin: 2rem auto;
+		padding: 2rem;
+		text-align: center;
+	}
+
+	.newsletter-signup h3 {
+		margin-top: 0;
+	}
+
+	.newsletter-signup p {
+		color: var(--gray);
+		margin: 0.5rem 0;
+	}
+
+	.newsletter-form {
+		display: flex;
+		gap: 0.5rem;
+		margin: 1.5rem 0;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.newsletter-form input[type="email"] {
+		flex: 1;
+		min-width: 200px;
+		padding: 0 0.5em;
+		border: none;
+		border-bottom: 0.2em solid var(--gray);
+		font-size: 1rem;
+		height: 2em;
+		background: var(--white);
+		color: var(--black);
+		font-family: inherit;
+	}
+
+	.newsletter-form input[type="email"]:focus {
+		outline: transparent;
+	}
+
+	.newsletter-form input[type="submit"] {
+		padding: 0.5em 1.5em;
+		background: var(--black);
+		color: var(--white);
+		border: none;
+		font-size: 1rem;
+		cursor: pointer;
+		font-family: inherit;
+		transition: opacity 0.2s;
+	}
+
+	.newsletter-form input[type="submit"]:hover {
+		opacity: 0.8;
+	}
+
+	.newsletter-note {
+		font-size: 0.85rem;
+		font-style: italic;
+		color: var(--gray);
+	}
+
+	@media (prefers-color-scheme: dark) {
+		.newsletter-form input[type="email"] {
+			background: var(--black);
+			color: var(--white);
+		}
+
+		.newsletter-form input[type="submit"] {
+			background: var(--white);
+			color: var(--black);
+		}
+	}
+
+	@media (max-width: 768px) {
+		.newsletter-signup {
+			padding: 1.5rem;
+			margin: 1.5rem 1rem;
+		}
+
+		.newsletter-form {
+			flex-direction: column;
+		}
+
+		.newsletter-form input[type="email"] {
+			width: 100%;
+		}
+	}
+</style>

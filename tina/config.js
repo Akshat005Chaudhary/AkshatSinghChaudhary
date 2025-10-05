@@ -73,16 +73,16 @@ export default defineConfig({
 								label: "Advice",
 							},
 							{
-								value: "events",
-								label: "Events",
+								value: "dsa",
+								label: "DSA",
 							},
 							{
 								value: "learning",
 								label: "Learning",
 							},
 							{
-								value: "meta",
-								label: "Meta",
+								value: "placements",
+								label: "Placements",
 							},
 							{
 								value: "work",

@@ -9,15 +9,59 @@ import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
 			<h1>{SITE_TITLE}</h1>
 			<h2>{SITE_DESCRIPTION}</h2>
 		</div>
+		<div class="img-frame">
+			<img src="/jageshwar_profile.jpg" alt="Profile photo" />
+		</div>
 	</div>
 </header>
 <nav>
-	<HeaderLink href="/">home</HeaderLink>
-	<HeaderLink href="/posts">posts</HeaderLink>
-	<HeaderLink href="https://cassidoo.co/newsletter">etc</HeaderLink>
+	<HeaderLink href="/">Home</HeaderLink>
+	<HeaderLink href="/posts">Posts</HeaderLink>
+	<HeaderLink href="https://github.com/Akshat005Chaudhary" target="_blank">GitHub</HeaderLink>
+	<HeaderLink href="https://www.linkedin.com/in/akshat-chaudhary-a62096249/" target="_blank">Linkedin</HeaderLink>
+	<HeaderLink href="https://medium.com/@chaudharyakshat555" target="_blank">Medium</HeaderLink>
+	<HeaderLink href="https://x.com/Ji_Chaudhary_Ji" target="_blank">X</HeaderLink>
+	<HeaderLink href="https://www.instagram.com/akshat_05_chaudhary/" target="_blank">Instagram</HeaderLink>
+	<HeaderLink href="https://www.facebook.com/share/1GhmanD4wn" target="_blank">Facebook</HeaderLink>
+	<HeaderLink href="https://drive.google.com/file/d/1ddx78zC38QxBAhquXf2G2lP3UZgkr7kH/view?usp=drive_link" target="_blank">Resume</HeaderLink>
 </nav>
 <style>
 	h2 {
 		margin: 0.5em 0;
+	}
+
+	.header-frame {
+		width: clamp(320px, 600px, 600px);
+	}
+
+	.header-frame h2 {
+		white-space: pre-wrap;
+	}
+
+	.img-frame {
+		position: relative;
+		width: 200px;
+		height: 200px;
+		margin: 10px 0;
+		border-radius: 50%;
+		overflow: hidden;
+	}
+
+	.img-frame img {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	@media (max-width: 768px) {
+		.header-section {
+			flex-direction: column;
+			text-align: center;
+		}
+
+		.header-frame {
+			width: 100%;
+		}
 	}
 </style>
