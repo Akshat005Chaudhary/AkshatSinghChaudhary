@@ -7,27 +7,15 @@ const config = isDev
       branch: process.env.HEAD || "master",
       clientId: process.env.TINACLIENTID,
       token: process.env.TINATOKEN,
-      build: {
-        outputFolder: "admin",
-        publicFolder: "public",
-      },
-      media: {
-        tina: {
-          mediaRoot: "assets",
-          publicFolder: "public",
-        },
-      },
+      build: { outputFolder: "admin", publicFolder: "public" },
+      media: { tina: { mediaRoot: "assets", publicFolder: "public" } },
       schema: {
         collections: [
           {
             name: "post",
             label: "Posts",
             path: "posts",
-            defaultItem: () => ({
-              title: "New Post",
-              added: new Date(),
-              tags: [],
-            }),
+            defaultItem: () => ({ title: "New Post", added: new Date(), tags: [] }),
             ui: {
               dateFormat: "MMM DD YYYY",
               filename: {
@@ -40,12 +28,7 @@ const config = isDev
               { name: "title", label: "Title", type: "string", isTitle: true, required: true },
               { name: "slug", label: "Slug", type: "string", required: true },
               { name: "description", label: "Description", type: "string", required: true },
-              {
-                name: "tags",
-                label: "Tags",
-                type: "string",
-                list: true,
-                options: [
+              { name: "tags", label: "Tags", type: "string", list: true, options: [
                   { value: "technical", label: "Technical" },
                   { value: "advice", label: "Advice" },
                   { value: "dsa", label: "DSA" },
@@ -66,35 +49,25 @@ const config = isDev
       search: {
         tina: {
           indexerToken: process.env.TINASEARCH,
-          stopwordLanguages: ["eng"],
+          stopwordLanguages: ["eng"], // must have at least one element
         },
-        indexBatchSize: 50,
-        maxSearchIndexFieldLength: 100,
+        indexBatchSize: 50,            // must be >= 1
+        maxSearchIndexFieldLength: 100 // must be >= 1
       },
     })
   : defineConfig({
-      // Minimal dummy config for production
+      // Minimal production config that satisfies Tina's schema
       branch: "master",
-      build: {
-        outputFolder: "admin",
-        publicFolder: "public",
-      },
-      media: {
-        tina: {
-          mediaRoot: "assets",
-          publicFolder: "public",
-        },
-      },
-      schema: {
-        collections: [],
-      },
+      build: { outputFolder: "admin", publicFolder: "public" },
+      media: { tina: { mediaRoot: "assets", publicFolder: "public" } },
+      schema: { collections: [] },
       search: {
         tina: {
-          indexerToken: "",
-          stopwordLanguages: [],
+          indexerToken: "dummy-token",        // dummy string
+          stopwordLanguages: ["eng"],         // at least 1 element
         },
-        indexBatchSize: 0,
-        maxSearchIndexFieldLength: 0,
+        indexBatchSize: 1,                     // at least 1
+        maxSearchIndexFieldLength: 1           // at least 1
       },
     });
 
