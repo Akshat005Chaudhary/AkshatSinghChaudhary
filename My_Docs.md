@@ -21,3 +21,5 @@ To add a new tag "dsa" add the following line in the tags array:
 }
 
 ---
+
+13. After making all the changes run `npm run build` which will create a `dist/` folder (production ready site)
