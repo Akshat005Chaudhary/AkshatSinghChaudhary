@@ -23,3 +23,7 @@ To add a new tag "dsa" add the following line in the tags array:
 ---
 
 13. After making all the changes run `npm run build` which will create a `dist/` folder (production ready site)
+
+---
+
+14. Note that inline editing is blocked on live website with netlify so i can't make changes in the live production website. Instead what im gonna do to make changes in the website. Come to the root terminal of the repo. Run `npm run dev`. Go to `http://localhost:4321/admin/index.html` and make the changes there. After making the changes run `npm run build` to deploy the changes to netlify. After this dist/ gets updated so now just commit and push the changes to github which will be detected by netlify and it will deploy the changes to the live website.
