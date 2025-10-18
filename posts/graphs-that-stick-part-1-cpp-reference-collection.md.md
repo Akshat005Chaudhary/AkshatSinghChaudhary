@@ -13,7 +13,6 @@ tags:
 added: 2025-10-18T07:37:17.295Z
 ---
 
-````markdown
 **1. Graph Representation by Adjacency Matrix:**
 
 ```
@@ -49,7 +48,7 @@ int main() {
 }
 ```
 
----
+***
 
 **2. Graph Representation by Adjacency List:**
 
@@ -87,7 +86,7 @@ int main() {
 }
 ```
 
----
+***
 
 **3. BFS:**
 
@@ -144,9 +143,9 @@ int main() {
 }
 ```
 
-- Time Complexity: O(V^2)
+* Time Complexity: O(V^2)
 
----
+***
 
 **4. DFS:**
 
@@ -208,9 +207,9 @@ int main() {
 }
 ```
 
-- Time Complexity: O(V+E)
+* Time Complexity: O(V+E)
 
----
+***
 
 **5. Dijkstra's Algorithm (Shortest Path):**
 
@@ -281,9 +280,9 @@ int main() {
 }
 ```
 
-- Time Complexity: O((V+E)logV)
+* Time Complexity: O((V+E)logV)
 
----
+***
 
 **6. Bellman Ford Algorithm (Shortest Path):**
 
@@ -362,9 +361,9 @@ int main() {
 }
 ```
 
-- Time Complexity: O(V\*E)
+* Time Complexity: O(V\*E)
 
----
+***
 
 **7. Floyd-Warshall Algorithm (Shortest Path):**
 
@@ -438,7 +437,7 @@ int V = 4; // Number of vertices
 
 Time Complexity: O(V^3)
 
----
+***
 
 **8. Prim's Algorithm (MST):**
 
@@ -515,14 +514,11 @@ int V = 5; // Number of vertices
 
 Time Complexity: O((V+E)logV)
 
----
+***
 
 **9. Disjoint Set Data Structure (Union-Find):**
 
-> Disjoint Set data structure also known as Union-Find data structure has 2 main operations - Union by Rank/Size and Find operation
-
-> 1. Union by Rank/Size is used to join the smaller set to the larger set
-> 2. Find(x) operation is used to find the parent root node of the x node, at starting each set comprises of a single element who is the parent of itself
+> Disjoint Set data structure also known as Union-Find data structure has 2 main operations - Union by Rank/Size and Find operation **(1)** Union by Rank/Size is used to join the smaller set to the larger set **(2)** Find(x) operation is used to find the parent root node of the x node, at starting each set comprises of a single element who is the parent of itself
 
 ```
 #include <bits/stdc++.h>
@@ -587,14 +583,16 @@ return 0;
 
 Time Complexity: The amortized time complexity for both find and unionBySize is O(α(n)), which is nearly constant time for all practical purposes.
 
----
+***
 
 **10. Kruskal's Algorithm (MST):**
 
 > Algo for Kruskal's:
 
-    1. Sort the graph as per edges in ascending order
-    2. Perform union operation on 2 disjoint sets if they have different parent
+```
+1. Sort the graph as per edges in ascending order
+2. Perform union operation on 2 disjoint sets if they have different parent
+```
 
 ```
 #include <bits/stdc++.h>
@@ -677,7 +675,4 @@ vector<vector<int>> edges = {
 
 Time Complexity: O(ElogE+Eα(V)). Since 𝛼 ( 𝑉 ) α(V) is very small, this simplifies to 𝑂 ( 𝐸 log ⁡ 𝐸 ) O(ElogE).
 
----
-
-
-````
+***
