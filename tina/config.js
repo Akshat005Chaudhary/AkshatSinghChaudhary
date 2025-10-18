@@ -13,7 +13,13 @@ export default defineConfig({
             name: "post",
             label: "Posts",
             path: "posts",
-            defaultItem: () => ({ title: "New Post", added: new Date(), tags: [] }),
+            defaultItem: () => ({
+              title: "New Post",
+              slug: "new-post",
+              description: "Description of the post",
+              tags: [],
+              added: new Date().toISOString()
+            }),
             ui: { dateFormat: "MMM DD YYYY" },
             fields: [
               { name: "title", label: "Title", type: "string", isTitle: true, required: true },
